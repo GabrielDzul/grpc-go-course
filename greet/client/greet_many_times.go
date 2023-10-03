@@ -23,7 +23,7 @@ func doGreetManyTimes(c pb.GreetServiceClient) {
 
 	for {
 		msg, err := stream.Recv()
-
+		// Check if the client has finished the data sending
 		if err == io.EOF {
 			break
 		}

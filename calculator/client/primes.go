@@ -25,6 +25,7 @@ func doPrimes(c pb.CalculatorServiceClient) {
 		//Receive response
 		msg, err := stream.Recv()
 
+		// Check if the client has finished the data sending
 		if err == io.EOF {
 			break
 		}
